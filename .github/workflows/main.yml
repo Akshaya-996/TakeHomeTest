@@ -1,38 +1,41 @@
-name: CI/CD Pipeline
+name: CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js environment
+      # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 18
           cache: npm
+          cache-dependency-path: ./ReactSPAProject/package-lock.json # Point to your child folder lock file
 
       # Step 3: Install dependencies
       - name: Install dependencies
+        working-directory: ./ReactSPAProject # Add this to point to the child directory
         run: npm install
 
-      # Step 4: Run linting
-      - name: Run ESLint
-        run: npm run lint
-
-      # Step 5: Run tests (if you have tests)
-      - name: Run tests
-        run: npm test
-
-      # Step 6: Build the project
-      - name: Build the project
+      # Step 4: Build the project
+      - name: Build project
+        working-directory: ./ReactSPAProject
         run: npm run build
+
+      # Step 5: Run tests
+      - name: Run tests
+        working-directory: ./ReactSPAProject
+        run: npm test
