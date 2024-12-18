@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        "name":"Oaks on William",
+        "rating":5,
+        "price":282,
+        "image":"https://hotelimages.webjet.com.au/lodging/1000000/30000/23800/23775/0a626b13_z.jpg",
+        "roomType": "Studio Apartment (No Housekeeping)"
+    },
+    {
+        "id":2,
+        "name":"Crowne Plaza Melbourne",
+        "rating":4,
+        "price":449,
+        "image":"https://hotelimages.webjet.com.au/lodging/1000000/850000/845400/845390/e394a620_z.jpg",
+        "roomType":"Standard Room, Non Smoking"
+    },
+    {
+        "id":3,
+        "name":"Novotel Melbourne on Collins",
+        "rating":3,
+        "price":401,
+        "image":"https://hotelimages.webjet.com.au/hotels/1000000/460000/451200/451160/a1830e51_z.jpg",
+        "roomType":"Deluxe King Room"
+    },
+    {
+        "id":4,
+        "name":"Oaks on William",
+        "rating":5,
+        "price":300,
+        "image":"https://hotelimages.webjet.com.au/lodging/1000000/570000/564500/564404/3398b9cd_z.jpg",
+        "roomType":"Deluxe King Room"
+    }
+]
