@@ -10,10 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x] # Test with multiple Node.js versions
-
     steps:
       # Step 1: Checkout the repository
       - name: Checkout code
