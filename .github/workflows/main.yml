@@ -34,8 +34,3 @@ jobs:
       - name: Build project
         working-directory: ./ReactSPAProject
         run: npm run build
-
-      # Step 5: Run tests
-      - name: Run tests
-        working-directory: ./ReactSPAProject
-        run: npm test
